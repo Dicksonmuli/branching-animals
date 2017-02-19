@@ -1,0 +1,63 @@
+<html>
+<hea>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <script src="js/jquery-3.1.1.js"></script>
+  <title>Voting messages</title>
+</head>
+<body>
+  <h1>Which animal would you like to learn about?</h1>
+  <div class="animals">
+        <label>
+          <input type="radio" name="animal" value="turtles" checked>
+          turtles
+        </label>
+      </div>
+      <div class="animals">
+        <label>
+          <input type="radio" name="animal" value="snakes">
+          snakes
+        </label>
+      </div>
+      <div class="animals">
+        <label>
+          <input type="radio" name="animal" value="insects">
+          insects
+        </label>
+      </div>
+  <div class="container">
+  <div id="turtles">
+    <h3>Turtles</h3>
+    <p>You are now ready to vote!!</p>
+  </div>
+  <div id="snakes">
+    <h3>Snakes</h3>
+    <p><a href="">Click here</a> to accesss learing materials to help you know more about voting</p>
+  </div>
+  <div id="insects">
+    <h3>Insects</h3>
+    <p><a href="">Click here</a> to accesss learing materials to help you know more about voting</p>
+  </div >
+  <div id="none"><h5> You should select a valid animal</h5></div>
+</div>
+<script>
+alert("Choose your favorite Animal");
+ var myAnimal = $("input:radio[name=animal]:checked").val();
+   event.preventDefault();
+
+if (myAnimal=turtles) {
+       $('#turtles').show();
+     } else if (myAnimal="snakes") {
+       $('#snakes').show();
+     } else if (myAnimal=insects){
+       $('#insects').show();
+     }
+     else {
+       $('#none').show();
+     }
+</script>
+</body>
+</html>
